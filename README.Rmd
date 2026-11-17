@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# assignmentB2XinyueZhang
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+'assignmentB2XinyueZhang' provides the function called 'summarise_stat()', which calculate mean, median, minimum and maximum of a numeric column in a dataframe, and returns them in a tibble. It works with the grouped dataframe, and the user can choose whether to remove NA value or not. 
+
+## Installation
+
+You can install the development version of assignmentB2XinyueZhang from [GitHub](https://github.com/UBC-STAT545-F2026/assignmentB2XinyueZhang) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("UBC-STAT545-F2026/assignmentB2XinyueZhang",ref="0.1.0")
+```
+
+## Usage
+
+```{r example}
+library(assignmentB2XinyueZhang)
+
+# summary statistic for a numeric column 
+summarise_stat(mtcars,mpg)
+
+# remove NA values before calculating 
+summarise_stat(airquality,Ozone,na.rm=TRUE)
+
+# summarise statistic for each group
+summarise_stat(dplyr::group_by(mtcars,cyl),mpg)
+```
