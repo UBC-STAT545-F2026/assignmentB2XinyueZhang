@@ -4,8 +4,8 @@ Version: 0.1.0
 Authors@R: 
     person("Xinyue Ashley", "Zhang", , "xzhan151@student.ubc.ca", role = c("aut", "cre"))
 Description: Provides a function that calculates the mean, median, minimum and maximum of a numeric 
-    column in a dataframe and returns them together in a tibble. This support the grouped dataframe, 
-    and optional removal of NA values. 
+    column in a data frame and returns them together in a tibble. Supports grouped data frames and 
+    optional removal of NA values. 
 License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
