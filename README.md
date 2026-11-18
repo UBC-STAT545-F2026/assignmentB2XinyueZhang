@@ -9,9 +9,9 @@
 
 ‘assignmentB2XinyueZhang’ provides the function called
 ‘summarise_stat()’, which calculate mean, median, minimum and maximum of
-a numeric column in a dataframe, and returns them in a tibble. It works
-with the grouped dataframe, and the user can choose whether to remove NA
-value or not.
+a numeric column in a data frame, and returns them in a tibble. It works
+with the grouped data frame, and the user can choose whether to remove
+NA value or not.
 
 ## Installation
 
@@ -29,18 +29,18 @@ devtools::install_github("UBC-STAT545-F2026/assignmentB2XinyueZhang",ref="0.1.0"
 ``` r
 library(assignmentB2XinyueZhang)
 
-# summary statistic for a numeric column 
-summarise_stat(mtcars,mpg)
+# summary statistic for a numeric column
+summarise_stat(mtcars, mpg)
 #>       mean median  min  max
 #> 1 20.09062   19.2 10.4 33.9
 
-# remove NA values before calculating 
-summarise_stat(airquality,Ozone,na.rm=TRUE)
+# remove NA values before calculating
+summarise_stat(airquality, Ozone, na.rm = TRUE)
 #>       mean median min max
 #> 1 42.12931   31.5   1 168
 
 # summarise statistic for each group
-summarise_stat(dplyr::group_by(mtcars,cyl),mpg)
+summarise_stat(dplyr::group_by(mtcars, cyl), mpg)
 #> # A tibble: 3 × 5
 #>     cyl  mean median   min   max
 #>   <dbl> <dbl>  <dbl> <dbl> <dbl>
